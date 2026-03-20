@@ -1,6 +1,6 @@
 # 🍝 Restaurant Reservierungssystem
 
-Dieses Projekt entstand im Rahmen eines Universitätsprojekts und stellt eine vollständige Webanwendung für ein Restaurant dar.  
+Dieses Projekt entstand im Rahmen eines Universitätsprojekts mit einem Kollegen (Tommy Ly) und stellt eine vollständige Webanwendung für ein Restaurant dar.  
 Die Anwendung ermöglicht es Nutzern, Reservierungen vorzunehmen, Benutzerkonten anzulegen und sich im System anzumelden.
 
 ---
