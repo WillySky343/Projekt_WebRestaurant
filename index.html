@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Bella Cucina – Fine Italian Restaurant</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="site-header" id="top">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <a href="#top" class="logo" aria-label="La Bella Cucina – home">
+        <span class="logo-icon">🍝</span>
+        <span>La Bella Cucina</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-menu" id="navMenu" role="list">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#reservation" class="nav-link btn-reserve">Reserve a Table</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home" aria-labelledby="heroHeading">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-tagline">Est. 2005 · Warsaw, Poland</p>
+      <h1 id="heroHeading">Authentic Italian Cuisine<br />Made with Passion</h1>
+      <p class="hero-sub">Fresh ingredients. Timeless recipes. Unforgettable flavours.</p>
+      <div class="hero-cta">
+        <a href="#menu" class="btn btn-primary">Explore Our Menu</a>
+        <a href="#reservation" class="btn btn-secondary">Book a Table</a>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <span class="scroll-arrow">&#8595;</span>
+    </div>
+  </section>
+
+  <!-- ===== HIGHLIGHTS STRIP ===== -->
+  <section class="highlights" aria-label="Restaurant highlights">
+    <div class="container highlights-grid">
+      <div class="highlight-item">
+        <span class="highlight-icon">🫒</span>
+        <h3>Fresh Ingredients</h3>
+        <p>Locally sourced produce delivered daily.</p>
+      </div>
+      <div class="highlight-item">
+        <span class="highlight-icon">👨‍🍳</span>
+        <h3>Expert Chefs</h3>
+        <p>Trained in the finest Italian culinary schools.</p>
+      </div>
+      <div class="highlight-item">
+        <span class="highlight-icon">🍷</span>
+        <h3>Fine Wines</h3>
+        <p>Curated selection of Italian and local wines.</p>
+      </div>
+      <div class="highlight-item">
+        <span class="highlight-icon">🌿</span>
+        <h3>Cosy Atmosphere</h3>
+        <p>Perfect for romantic dinners and family gatherings.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about section" id="about" aria-labelledby="aboutHeading">
+    <div class="container about-grid">
+      <div class="about-image">
+        <div class="image-placeholder about-img-placeholder" aria-label="Interior of La Bella Cucina restaurant">
+          <span>🍽️</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="section-label">Our Story</p>
+        <h2 id="aboutHeading">A Family Passion Turned into Art</h2>
+        <p>La Bella Cucina was founded in 2005 by the Rossi family, who brought the authentic flavours of their native Tuscany to Warsaw. What started as a small trattoria has grown into one of the city's most beloved dining destinations.</p>
+        <p>Our kitchen is led by Head Chef Marco Rossi, who blends traditional recipes passed down through generations with contemporary techniques to create dishes that celebrate the very best of Italian gastronomy.</p>
+        <ul class="about-stats" role="list">
+          <li><strong>20+</strong> Years of Experience</li>
+          <li><strong>★★★</strong> Best Restaurant Award</li>
+          <li><strong>5000+</strong> Happy Guests / Month</li>
+        </ul>
+        <a href="#reservation" class="btn btn-primary">Reserve Your Table</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MENU ===== -->
+  <section class="menu section" id="menu" aria-labelledby="menuHeading">
+    <div class="container">
+      <p class="section-label">What We Offer</p>
+      <h2 id="menuHeading" class="section-title">Our Menu</h2>
+      <p class="section-subtitle">A journey through the finest Italian flavours.</p>
+
+      <!-- Category tabs -->
+      <div class="menu-tabs" role="tablist" aria-label="Menu categories">
+        <button class="menu-tab active" role="tab" data-category="starters" aria-selected="true">Starters</button>
+        <button class="menu-tab" role="tab" data-category="pasta" aria-selected="false">Pasta & Risotto</button>
+        <button class="menu-tab" role="tab" data-category="mains" aria-selected="false">Main Courses</button>
+        <button class="menu-tab" role="tab" data-category="desserts" aria-selected="false">Desserts</button>
+        <button class="menu-tab" role="tab" data-category="drinks" aria-selected="false">Drinks</button>
+      </div>
+
+      <!-- Menu items grid -->
+      <div class="menu-grid" id="menuGrid" aria-live="polite">
+
+        <!-- Starters -->
+        <article class="menu-card" data-category="starters">
+          <div class="menu-card-img placeholder-food" aria-hidden="true">🥗</div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Bruschetta al Pomodoro</h3>
+              <span class="menu-price">29 zł</span>
+            </div>
+            <p>Toasted ciabatta topped with fresh tomatoes, garlic, basil and extra-virgin olive oil.</p>
+            <span class="menu-tag">Vegetarian</span>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="starters">
+          <div class="menu-card-img placeholder-food" aria-hidden="true">🐙</div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Calamari Fritti</h3>
+              <span class="menu-price">45 zł</span>
+            </div>
+            <p>Crispy fried squid rings served with homemade aioli and lemon wedges.</p>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="starters">
+          <div class="menu-card-img placeholder-food" aria-hidden="true">🍖</div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Antipasto Misto</h3>
+              <span class="menu-price">55 zł</span>
+            </div>
+            <p>Selection of cured meats, olives, artichokes and grilled vegetables.</p>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="starters">
+          <div class="menu-card-img placeholder-food" aria-hidden="true">🫕</div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Zuppa di Pesce</h3>
+              <span class="menu-price">52 zł</span>
+            </div>
+            <p>Rich Italian fish soup with clams, mussels, shrimp and a tomato broth.</p>
+          </div>
+        </article>
+
+        <!-- Pasta & Risotto -->
+        <article class="menu-card" data-category="pasta">
+          <div class="menu-card-img placeholder-food" aria-hidden="true">🍝</div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Spaghetti Carbonara</h3>
+              <span class="menu-price">48 zł</span>
+            </div>
+            <p>Classic Roman pasta with guanciale, egg yolk, Pecorino Romano and black pepper.</p>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="pasta">
+          <div class="menu-card-img placeholder-food" aria-hidden="true">🍜</div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Pappardelle al Cinghiale</h3>
+              <span class="menu-price">62 zł</span>
+            </div>
+            <p>Wide egg pasta ribbons in a slow-cooked wild boar ragù with juniper berries.</p>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="pasta">
+          <div class="menu-card-img placeholder-food" aria-hidden="true">🌾</div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Risotto ai Funghi Porcini</h3>
+              <span class="menu-price">58 zł</span>
+            </div>
+            <p>Creamy Arborio rice with porcini mushrooms, Parmesan and fresh thyme.</p>
+            <span class="menu-tag">Vegetarian</span>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="pasta">
+          <div class="menu-card-img placeholder-food" aria-hidden="true">🦐</div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Linguine alle Vongole</h3>
+              <span class="menu-price">65 zł</span>
+            </div>
+            <p>Linguine with fresh clams, white wine, garlic, chilli and parsley.</p>
+          </div>
+        </article>
+
+        <!-- Mains -->
+        <article class="menu-card" data-category="mains">
+          <div class="menu-card-img placeholder-food" aria-hidden="true">🥩</div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Tagliata di Manzo</h3>
+              <span class="menu-price">95 zł</span>
+            </div>
+            <p>Sliced grilled beef sirloin with rocket, cherry tomatoes and Parmesan shavings.</p>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="mains">
+          <div class="menu-card-img placeholder-food" aria-hidden="true">🐟</div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Branzino al Forno</h3>
+              <span class="menu-price">88 zł</span>
+            </div>
+            <p>Whole oven-baked sea bass with lemon, capers, olives and Mediterranean herbs.</p>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="mains">
+          <div class="menu-card-img placeholder-food" aria-hidden="true">🍗</div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Pollo alla Toscana</h3>
+              <span class="menu-price">72 zł</span>
+            </div>
+            <p>Pan-roasted chicken with sun-dried tomatoes, spinach and a creamy Tuscan sauce.</p>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="mains">
+          <div class="menu-card-img placeholder-food" aria-hidden="true">🥦</div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Melanzane alla Parmigiana</h3>
+              <span class="menu-price">58 zł</span>
+            </div>
+            <p>Layers of aubergine, rich tomato sauce, mozzarella and basil, baked to perfection.</p>
+            <span class="menu-tag">Vegetarian</span>
+          </div>
+        </article>
+
+        <!-- Desserts -->
+        <article class="menu-card" data-category="desserts">
+          <div class="menu-card-img placeholder-food" aria-hidden="true">🍮</div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Tiramisù Classico</h3>
+              <span class="menu-price">32 zł</span>
+            </div>
+            <p>Traditional mascarpone cream layered with espresso-soaked ladyfingers and cocoa.</p>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="desserts">
+          <div class="menu-card-img placeholder-food" aria-hidden="true">🍦</div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Panna Cotta ai Frutti Rossi</h3>
+              <span class="menu-price">28 zł</span>
+            </div>
+            <p>Silky vanilla panna cotta with a fresh berry coulis.</p>
+            <span class="menu-tag">Gluten Free</span>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="desserts">
+          <div class="menu-card-img placeholder-food" aria-hidden="true">🍋</div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Torta al Limone</h3>
+              <span class="menu-price">30 zł</span>
+            </div>
+            <p>Light lemon tart with a buttery pastry shell and zesty lemon curd filling.</p>
+          </div>
+        </article>
+
+        <!-- Drinks -->
+        <article class="menu-card" data-category="drinks">
+          <div class="menu-card-img placeholder-food" aria-hidden="true">🍷</div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Chianti Classico DOCG</h3>
+              <span class="menu-price">42 zł / glass</span>
+            </div>
+            <p>A dry, full-bodied Tuscan red with notes of cherry, plum and earthy spices.</p>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="drinks">
+          <div class="menu-card-img placeholder-food" aria-hidden="true">🥂</div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Prosecco DOC</h3>
+              <span class="menu-price">38 zł / glass</span>
+            </div>
+            <p>Crisp, fruity Italian sparkling wine – perfect as an aperitivo.</p>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="drinks">
+          <div class="menu-card-img placeholder-food" aria-hidden="true">☕</div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Espresso Romano</h3>
+              <span class="menu-price">14 zł</span>
+            </div>
+            <p>Rich Italian espresso served with a twist of lemon rind.</p>
+          </div>
+        </article>
+
+      </div><!-- /menu-grid -->
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section class="gallery section" id="gallery" aria-labelledby="galleryHeading">
+    <div class="container">
+      <p class="section-label">A Taste of Our World</p>
+      <h2 id="galleryHeading" class="section-title">Photo Gallery</h2>
+    </div>
+    <div class="gallery-grid" role="list">
+      <div class="gallery-item" role="listitem" aria-label="Pasta dish">
+        <div class="gallery-placeholder"><span>🍝</span><p>Handmade Pasta</p></div>
+      </div>
+      <div class="gallery-item gallery-item--tall" role="listitem" aria-label="Restaurant interior">
+        <div class="gallery-placeholder"><span>🏛️</span><p>Our Interior</p></div>
+      </div>
+      <div class="gallery-item" role="listitem" aria-label="Dessert">
+        <div class="gallery-placeholder"><span>🍮</span><p>Signature Desserts</p></div>
+      </div>
+      <div class="gallery-item" role="listitem" aria-label="Pizza">
+        <div class="gallery-placeholder"><span>🍕</span><p>Artisan Pizza</p></div>
+      </div>
+      <div class="gallery-item gallery-item--wide" role="listitem" aria-label="Wine selection">
+        <div class="gallery-placeholder"><span>🍷</span><p>Wine Selection</p></div>
+      </div>
+      <div class="gallery-item" role="listitem" aria-label="Chef at work">
+        <div class="gallery-placeholder"><span>👨‍🍳</span><p>Chef Marco</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESERVATION ===== -->
+  <section class="reservation section" id="reservation" aria-labelledby="reservationHeading">
+    <div class="container reservation-grid">
+      <div class="reservation-info">
+        <p class="section-label">Book a Table</p>
+        <h2 id="reservationHeading">Join Us for an Unforgettable Evening</h2>
+        <p>We look forward to welcoming you. To make a reservation, fill out the form or give us a call.</p>
+        <ul class="opening-hours" role="list">
+          <li><strong>Monday – Thursday</strong> 12:00 – 22:00</li>
+          <li><strong>Friday – Saturday</strong> 12:00 – 23:30</li>
+          <li><strong>Sunday</strong> 12:00 – 21:00</li>
+        </ul>
+        <address class="contact-details">
+          <p>📍 ul. Nowy Świat 12, 00-373 Warsaw</p>
+          <p>📞 <a href="tel:+48221234567">+48 22 123 45 67</a></p>
+          <p>✉️ <a href="mailto:hello@labellacucina.pl">hello@labellacucina.pl</a></p>
+        </address>
+      </div>
+
+      <form class="reservation-form" id="reservationForm" novalidate aria-label="Table reservation form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="guestName">Full Name *</label>
+            <input type="text" id="guestName" name="guestName" placeholder="John Smith" required autocomplete="name" />
+            <span class="form-error" role="alert" id="guestNameError"></span>
+          </div>
+          <div class="form-group">
+            <label for="guestEmail">Email Address *</label>
+            <input type="email" id="guestEmail" name="guestEmail" placeholder="john@example.com" required autocomplete="email" />
+            <span class="form-error" role="alert" id="guestEmailError"></span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="guestPhone">Phone Number</label>
+            <input type="tel" id="guestPhone" name="guestPhone" placeholder="+48 600 000 000" autocomplete="tel" />
+          </div>
+          <div class="form-group">
+            <label for="guestCount">Number of Guests *</label>
+            <select id="guestCount" name="guestCount" required>
+              <option value="">Select guests</option>
+              <option value="1">1 Person</option>
+              <option value="2">2 People</option>
+              <option value="3">3 People</option>
+              <option value="4">4 People</option>
+              <option value="5">5 People</option>
+              <option value="6">6 People</option>
+              <option value="7-10">7 – 10 People</option>
+              <option value="10+">10+ People (Private Event)</option>
+            </select>
+            <span class="form-error" role="alert" id="guestCountError"></span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="reservationDate">Date *</label>
+            <input type="date" id="reservationDate" name="reservationDate" required />
+            <span class="form-error" role="alert" id="reservationDateError"></span>
+          </div>
+          <div class="form-group">
+            <label for="reservationTime">Time *</label>
+            <select id="reservationTime" name="reservationTime" required>
+              <option value="">Select time</option>
+              <option value="12:00">12:00</option>
+              <option value="12:30">12:30</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+              <option value="20:30">20:30</option>
+              <option value="21:00">21:00</option>
+            </select>
+            <span class="form-error" role="alert" id="reservationTimeError"></span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="specialRequests">Special Requests</label>
+          <textarea id="specialRequests" name="specialRequests" rows="3" placeholder="Allergies, dietary requirements, special occasions…"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">Confirm Reservation</button>
+        <div class="form-success" id="formSuccess" role="status" aria-live="polite" hidden>
+          🎉 Thank you! Your reservation request has been received. We will confirm via email shortly.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact section" id="contact" aria-labelledby="contactHeading">
+    <div class="container">
+      <p class="section-label">Find Us</p>
+      <h2 id="contactHeading" class="section-title">Contact &amp; Location</h2>
+      <div class="contact-grid">
+        <div class="map-placeholder" role="img" aria-label="Map placeholder showing restaurant location at ul. Nowy Świat 12, Warsaw">
+          <span>🗺️</span>
+          <p>ul. Nowy Świat 12<br />Warsaw, Poland</p>
+        </div>
+        <div class="contact-cards">
+          <div class="contact-card">
+            <span class="contact-card-icon">📍</span>
+            <h3>Address</h3>
+            <address>ul. Nowy Świat 12<br />00-373 Warsaw, Poland</address>
+          </div>
+          <div class="contact-card">
+            <span class="contact-card-icon">📞</span>
+            <h3>Phone</h3>
+            <p><a href="tel:+48221234567">+48 22 123 45 67</a></p>
+          </div>
+          <div class="contact-card">
+            <span class="contact-card-icon">✉️</span>
+            <h3>Email</h3>
+            <p><a href="mailto:hello@labellacucina.pl">hello@labellacucina.pl</a></p>
+          </div>
+          <div class="contact-card">
+            <span class="contact-card-icon">🕐</span>
+            <h3>Opening Hours</h3>
+            <p>Mon–Thu: 12:00–22:00<br />Fri–Sat: 12:00–23:30<br />Sun: 12:00–21:00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="logo-icon">🍝</span>
+        <strong>La Bella Cucina</strong>
+        <p>Bringing the heart of Italy to Warsaw since 2005.</p>
+        <div class="social-links" aria-label="Social media links">
+          <a href="#" aria-label="Facebook" class="social-link">Facebook</a>
+          <a href="#" aria-label="Instagram" class="social-link">Instagram</a>
+          <a href="#" aria-label="TripAdvisor" class="social-link">TripAdvisor</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul role="list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#reservation">Reservations</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Newsletter</h4>
+        <p>Get updates on seasonal menus and special events.</p>
+        <form class="newsletter-form" id="newsletterForm" novalidate aria-label="Newsletter sign-up">
+          <input type="email" name="nlEmail" id="nlEmail" placeholder="your@email.com" required aria-label="Email address for newsletter" />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <div class="nl-success" id="nlSuccess" hidden role="status">Thanks for subscribing! 🎉</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="currentYear"></span> La Bella Cucina. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" hidden>&#8679;</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
